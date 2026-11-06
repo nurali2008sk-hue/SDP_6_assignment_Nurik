@@ -74,9 +74,13 @@ public class InspectionDemo {
         Directory project = createDemoProject();
 
         SecurityAuditVisitor securityVisitor = new SecurityAuditVisitor();
-
         project.accept(securityVisitor);
-
         securityVisitor.printReport();
+
+        ProjectStatisticsVisitor statisticsVisitor =
+                new ProjectStatisticsVisitor();
+
+        project.accept(statisticsVisitor);
+        statisticsVisitor.printReport();
     }
 }
