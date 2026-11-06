@@ -82,5 +82,9 @@ public class InspectionDemo {
 
         project.accept(statisticsVisitor);
         statisticsVisitor.printReport();
+
+        QualityGateVisitor qualityGateVisitor = new QualityGateVisitor();
+        project.accept(qualityGateVisitor);
+        qualityGateVisitor.printReport();
     }
 }
