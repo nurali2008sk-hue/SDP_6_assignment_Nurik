@@ -90,5 +90,8 @@ public class InspectionDemo {
         ComplianceVisitor complianceVisitor = new ComplianceVisitor();
         project.accept(complianceVisitor);
         complianceVisitor.printReport();
+        TechnicalDebtVisitor technicalDebtVisitor = new TechnicalDebtVisitor();
+        project.accept(technicalDebtVisitor);
+        technicalDebtVisitor.printReport();
     }
 }
